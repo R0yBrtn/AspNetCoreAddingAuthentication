@@ -4,12 +4,16 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Identity;
+using WishList.Models;
 
 namespace WishList.Controllers
 {
     [Authorize]
     public class AccountController : Controller
     {
-        
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly SignInManager<ApplicationUser> _signInManager;
+
     }
 }
